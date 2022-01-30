@@ -10,13 +10,13 @@ _Πιθανό upgrade (απαιτείται διερεύνηση): χρήση τ
 Το ESP32 θα διαβάζει όλους τους αισθητήρες που είναι άμεσα συνδεδεμένοι με αυτό (βλ. σχετική αναφορά στην ενότητα **Hardware**), θα διαβάζει μέσω σειριακής επικοινωνίας μηνύματα από το 1ο σύστημα (Jetson) και θα ελέγχει όλους τους actuators (κινητήρες, οθόνη, buzzers, LEDs κλπ).
 ## Hardware (electronics)
 Προσωρινή λίστα - γενικές περιγραφές:
-**1o σύστημα:**
+### 1o σύστημα
 1.  Jetson Nano 2GB
 2.  CSI Camera (pi camera v2)
 3.  LiPo battery 3 cell (11.1V)
 4.  Down buck converter
 5.  Power switch
-**2ο σύστημα:**
+### 2ο σύστημα:
 1.  ESP32
 2.  Ultrasonic distance sensors (X 2)
 3.  LEGO EV3 color sensor
