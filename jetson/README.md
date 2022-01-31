@@ -14,6 +14,7 @@
 
 - camera.py: class Camera
   - properties:
+    - type (-1 for csi, > 0 for web cam)
     - width (1920X1080-30fps, 1280X720-60fps, **640**X480-90fps)
     - height (1920X1080-30fps, 1280X720-60fps, 640X**480**-90fps)
     - framerate (1920X1080-30fps, 1280X720-60fps, 640X480-**90**fps)
@@ -28,7 +29,7 @@
       - (6): vertical-flip – Flip vertically
       - (7): upper-left-diagonal – Flip across upper left/low
   - methods
-    - get_image()
+    - get_frame()
       - parameters: -
       - returns: an image 
 - pillar.py: class Pillar
