@@ -47,4 +47,13 @@
         - y: y position on image
         - h: horizontal distance from the center, from -10 to 10
         - v: vertical distance from the center, from -10 to 10
-- communication.py
+- communication.py: class Communication
+  -  properties:
+    - port (default "/dev/ttyTHS1")
+    - baudrate (default 115200)
+  -  methods
+    - send_json(data)
+      - data: the dictionary to send with serial
+      - return: None
+    - get_json()
+      - return: the incoming dictionary from serial 
