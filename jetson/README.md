@@ -14,7 +14,6 @@
 
 - camera.py: class Camera
   - properties:
-    - type {**csi**, usb}
     - width (1920X1080-30fps, 1280X720-60fps, **640**X480-90fps)
     - height (1920X1080-30fps, 1280X720-60fps, 640X**480**-90fps)
     - framerate (1920X1080-30fps, 1280X720-60fps, 640X480-**90**fps)
