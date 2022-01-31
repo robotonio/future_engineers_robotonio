@@ -35,13 +35,13 @@
 - pillar.py: class Pillar
   - properties:
     - name (string, like 'red', 'green')
-    - lower (lower HSV bound)
-    - upper (upper HSV bound)
+    - lowers (lower HSV bounds)
+    - uppers (upper HSV bounds)
     - min_area (the minimum valid area)
   - methods
     - get_pos_size(image)
       - image: the image in which the search will be made
-      - returns: a list with all pillars, sorted fron bigger to smaller eg [], [{'area':50, 'x':100, 'y':70, 'h'=2, 'v'=4}], where
+      - returns: a list with all pillars, sorted fron bigger to smaller eg [], [{'area':50, 'x':100, 'y':70, 'h'=-2, 'v'=4}], where
         - area: the pillar's area
         - x: x position on image
         - y: y position on image
