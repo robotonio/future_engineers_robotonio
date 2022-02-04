@@ -49,8 +49,8 @@
         - v: vertical distance from the center, from -10 to 10
 - communication.py: class Communication
   -  properties:
-    - port (default "/dev/ttyTHS1")
-    - baudrate (default 115200)
+      - port (default "/dev/ttyTHS1")
+      - baudrate (default 115200)
   -  methods
     - send_json(data)
       - data: the dictionary to send with serial
