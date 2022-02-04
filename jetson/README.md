@@ -52,8 +52,8 @@
       - port (default "/dev/ttyTHS1")
       - baudrate (default 115200)
   -  methods
-    - send_json(data)
-      - data: the dictionary to send with serial
-      - return: None
-    - get_json()
-      - return: the incoming dictionary from serial 
+      - send_json(data)
+        - data: the dictionary to send with serial
+        - return: None
+      - get_json()
+        - return: the incoming dictionary from serial 
