@@ -39,14 +39,44 @@
     - uppers (upper HSV bounds)
     - min_area (the minimum valid area)
   - methods
-    - get_pillar_info(image)
-      - image: the image in which the search will be made
-      - returns: a list with all pillars, sorted fron bigger to smaller eg [], [{'area':50, 'x':100, 'y':70, 'h'=-2, 'v'=4}], where
-        - area: the pillar's area
-        - x: x position on image
-        - y: y position on image
-        - h: horizontal distance from the center, from -10 to 10
-        - v: vertical distance from the center, from -10 to 10
+    - get_info() 
+      - parameters: -
+      - returns: a string eith the pillar's info
+- pillar_detector.py: class PillarDetector
+  - properties:
+    - pillars: the list with all possible pillars
+  - methods:
+    - pre_processing(self, image, blur=5, canny_thres=None, dia=1)
+      - Prepares the image before processing
+      - parameters:
+        - image: the image to process
+        - blur: the size of the kernel
+        - canny_thres: the canny's algorithm threshold
+        - dia: the dilation's iteations
+    - find_color(self, image, hsv_image, hsv_bounds)
+      - Creates the mask in the image with the desired hsv ranges and returns its bitwise_and with the image
+      - parameters:
+        - image: the image to look for color
+        - hsv_image: the same image in HSV color space
+        - hsv_bounds: the HSV lower and upper ranges
+      - returns:
+        - the bitwise_and result from the mask and the original image
+    - find_contours(self, image, img_pre, min_area=10, sort=True, filter=0, draw_con=True)
+      - looks for the outer contours of the image and returns the list of what was found
+      - parameters:
+        - image: the original image
+        - img_pre: The image prepared by the method pre_processing
+        - min_area: the size of the minimum area of valid contours in (square) pixels
+        - sort: if True the list will be sorted in descending order of area (starting from the biggest)
+        - filter: if > 0, the valid shape of the contours (eg 4 for rectangles), if 0, we don't care for the shape
+        - draw_con: if True a green rectangle will enclose the contours found
+      - returns:
+        - returns a tuple with the list of detected outer contours and the processed image
+    - detect_pillars(self, image)
+      - detects all the pillars (see propetries) in the image
+      - image: the original image  
+      - returns: 
+        - the list with all the detected pillars
 - communication.py: class Communication
   -  properties:
       - port (default "/dev/ttyTHS1")
