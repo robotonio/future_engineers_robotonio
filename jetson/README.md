@@ -74,7 +74,8 @@
         - returns a tuple with the list of detected outer contours and the processed image
     - detect_pillars(self, image)
       - detects all the pillars (see propetries) in the image
-      - image: the original image  
+      - parameters:
+        - image: the original image  
       - returns: 
         - the list with all the detected pillars
 - communication.py: class Communication
